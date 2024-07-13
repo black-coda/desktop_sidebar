@@ -1,7 +1,7 @@
 import 'package:desktop_sidebar/features/home/providers.dart';
 import 'package:desktop_sidebar/features/home/widgets/margin.dart';
 import 'package:flutter/material.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class CreateNewTask extends ConsumerWidget {
   const CreateNewTask({super.key});

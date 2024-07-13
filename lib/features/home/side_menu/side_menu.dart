@@ -10,7 +10,7 @@ import 'package:desktop_sidebar/features/home/widgets/services_menu.dart';
 import 'package:desktop_sidebar/features/home/widgets/settings_menu.dart';
 import 'package:desktop_sidebar/src/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class SideMenu extends ConsumerWidget {
   const SideMenu({super.key});
@@ -26,7 +26,7 @@ class SideMenu extends ConsumerWidget {
         children: [
           ListView(
             shrinkWrap: true,
-            physics: const NeverScrollableScrollPhysics(),
+            // physics: const NeverScrollableScrollPhysics(),
             padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 24),
             children: [
               const ProfileHeader(),
@@ -36,7 +36,7 @@ class SideMenu extends ConsumerWidget {
                   height: 0,
                 ),
               ),
-              const MenuHeader(title: 'Menu', value: '6'),
+              MenuHeader(title: 'Menu', value: menuItems.length.toString()),
               const ColSpacing(8),
               ...menuItems.map(
                 (e) => MenuTile(

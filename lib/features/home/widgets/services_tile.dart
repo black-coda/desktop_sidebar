@@ -2,7 +2,7 @@ import 'package:desktop_sidebar/features/home/models/service.dart';
 import 'package:desktop_sidebar/features/home/providers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class ServiceTile extends ConsumerWidget {
   final ServiceModel service;
@@ -21,9 +21,9 @@ class ServiceTile extends ConsumerWidget {
           padding: EdgeInsets.only(left: isCollapsed ? 24 : 8.0),
           child: CircleAvatar(
               maxRadius: 15,
-              backgroundColor: Color(0xffE9E7E8),
+              backgroundColor: const Color(0xffE9E7E8),
               child: isAdd
-                  ? Icon(
+                  ? const Icon(
                       Icons.add,
                       size: 18,
                     )

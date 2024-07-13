@@ -2,7 +2,7 @@ import 'package:desktop_sidebar/features/home/models/menu_item.dart';
 import 'package:desktop_sidebar/features/home/providers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class MenuTile extends ConsumerWidget {
   final MenuItemModel menu;
@@ -36,9 +36,9 @@ class MenuTile extends ConsumerWidget {
             ? null
             : Text(
                 menu.title,
-          overflow: TextOverflow.fade,
-          maxLines: 1,
-          softWrap: false,
+                overflow: TextOverflow.fade,
+                maxLines: 1,
+                softWrap: false,
                 style: TextStyle(
                     fontSize: 14,
                     color: menu.index == selectedMenu

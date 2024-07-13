@@ -1,7 +1,7 @@
 import 'package:desktop_sidebar/features/home/screens/home.dart';
 import 'package:desktop_sidebar/src/hide_scroll_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 void main() {
   runApp(const ProviderScope(child: MyApp()));
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(
           seedColor: Colors.deepPurple,
         ).copyWith(
-          background: const Color(0xffE9EEF2),
+          surface: const Color(0xffE9EEF2),
         ),
         useMaterial3: true,
       ),
